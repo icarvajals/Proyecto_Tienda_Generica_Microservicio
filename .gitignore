@@ -1,0 +1,13 @@
+# Ignorar configuraciones de IDE
+.idea/
+*.iml
+.vscode/
+
+# Ignorar archivos de compilación de Java
+**/target/
+**/bin/
+build/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
