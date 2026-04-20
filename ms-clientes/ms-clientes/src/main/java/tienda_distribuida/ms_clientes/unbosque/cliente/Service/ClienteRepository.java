@@ -1,8 +1,8 @@
-package com.example.tienda_generica_distribuidos.unbosque.cliente.Service;
+package tienda_distribuida.ms_clientes.unbosque.cliente.Service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.example.tienda_generica_distribuidos.unbosque.cliente.Entidad.ClienteEntidad;
+import tienda_distribuida.ms_clientes.unbosque.cliente.Entidad.ClienteEntidad;
 
 
 @Repository

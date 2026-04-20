@@ -1,7 +1,6 @@
-package com.example.tienda_generica_distribuidos.unbosque.usuario.Service;
+package tienda_distribuida.ms_usuarios.unbosque.usuario.Service;
 
-import com.example.tienda_generica_distribuidos.unbosque.usuario.DTO.UsuarioDTO;
-
+import tienda_distribuida.ms_usuarios.unbosque.usuario.DTO.UsuarioDTO;
 import java.util.List;
 
 public interface UsuarioInterface {

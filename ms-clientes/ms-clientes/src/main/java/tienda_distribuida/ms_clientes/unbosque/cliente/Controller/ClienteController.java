@@ -1,11 +1,12 @@
-package com.example.tienda_generica_distribuidos.unbosque.cliente.Controller;
+package tienda_distribuida.ms_clientes.unbosque.cliente.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.tienda_generica_distribuidos.unbosque.cliente.DTO.ClienteDTO;
-import com.example.tienda_generica_distribuidos.unbosque.cliente.Service.ClienteInterface;
+import tienda_distribuida.ms_clientes.unbosque.cliente.DTO.ClienteDTO;
+import tienda_distribuida.ms_clientes.unbosque.cliente.Service.ClienteInterface;
+
 import java.util.List;
 
 @RestController

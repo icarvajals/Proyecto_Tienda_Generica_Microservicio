@@ -1,0 +1,13 @@
+package tienda_distribuida.ms_ventas.unbosque.detalleVenta.Controller;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@FeignClient(name = "MS-PRODUCTOS")
+public interface ProductoClient {
+
+    @GetMapping("/api/productos/buscar/{id}")
+    ResponseEntity<?> buscarProductoPorID(@PathVariable("id") int id);
+}

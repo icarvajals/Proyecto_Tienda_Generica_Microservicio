@@ -1,10 +1,10 @@
-package com.example.tienda_generica_distribuidos.unbosque.usuario.Service;
+package tienda_distribuida.ms_usuarios.unbosque.usuario.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.tienda_generica_distribuidos.unbosque.usuario.DTO.UsuarioDTO;
-import com.example.tienda_generica_distribuidos.unbosque.usuario.Entidad.UsuarioEntidad;
 
+import tienda_distribuida.ms_usuarios.unbosque.usuario.DTO.UsuarioDTO;
+import tienda_distribuida.ms_usuarios.unbosque.usuario.Entidad.UsuarioEntidad;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

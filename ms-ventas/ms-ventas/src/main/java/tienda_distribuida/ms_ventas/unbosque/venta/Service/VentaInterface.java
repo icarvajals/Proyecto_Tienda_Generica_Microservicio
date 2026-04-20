@@ -1,6 +1,6 @@
-package com.example.tienda_generica_distribuidos.unbosque.venta.Service;
+package tienda_distribuida.ms_ventas.unbosque.venta.Service;
 
-import com.example.tienda_generica_distribuidos.unbosque.venta.DTO.VentaDTO;
+import tienda_distribuida.ms_ventas.unbosque.venta.DTO.VentaDTO;
 
 import java.util.List;
 

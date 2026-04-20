@@ -1,4 +1,4 @@
-package com.example.tienda_generica_distribuidos.unbosque.cliente.Entidad;
+package tienda_distribuida.ms_clientes.unbosque.cliente.Entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

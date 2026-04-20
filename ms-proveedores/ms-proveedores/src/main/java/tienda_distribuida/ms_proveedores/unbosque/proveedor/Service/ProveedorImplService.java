@@ -1,10 +1,13 @@
-package com.example.tienda_generica_distribuidos.unbosque.proveedor.Service;
+package tienda_distribuida.ms_proveedores.unbosque.proveedor.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.example.tienda_generica_distribuidos.unbosque.proveedor.DTO.ProveedorDTO;
-import com.example.tienda_generica_distribuidos.unbosque.proveedor.Entidad.ProveedorEntidad;
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.DTO.ProveedorDTO;
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.Entidad.ProveedorEntidad;
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.Service.ProveedorInterface;
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.Service.ProveedorRepository;
+
 
 import java.util.ArrayList;
 import java.util.List;

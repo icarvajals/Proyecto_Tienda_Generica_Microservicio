@@ -1,16 +1,18 @@
-package com.example.tienda_generica_distribuidos.unbosque.producto.Service;
+package tienda_distribuida.ms_productos.unbosque.producto.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.tienda_generica_distribuidos.unbosque.producto.DTO.ProductoDTO;
-import com.example.tienda_generica_distribuidos.unbosque.producto.Entidad.ProductoEntidad;
+import tienda_distribuida.ms_productos.unbosque.producto.DTO.ProductoDTO;
+import tienda_distribuida.ms_productos.unbosque.producto.Entidad.ProductoEntidad;
+import tienda_distribuida.ms_productos.unbosque.producto.Service.ProductoInterface;
+import tienda_distribuida.ms_productos.unbosque.producto.Service.ProductoRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductoImplService implements ProductoInterface{
+public class ProductoImplService implements ProductoInterface {
 
     @Autowired
     private ProductoRepository productoRepository;
@@ -26,7 +28,6 @@ public class ProductoImplService implements ProductoInterface{
                 productoDTO.getPrecio_venta(),
                 productoDTO.getIvacompra()
         );
-
         try {
             ProductoEntidad guardado = productoRepository.save(entidad);
             productoDTO.setCodigo_producto(guardado.getCodigo_producto());

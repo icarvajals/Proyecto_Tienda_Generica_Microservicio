@@ -1,7 +1,6 @@
-package com.example.tienda_generica_distribuidos.unbosque.detalleVenta.Service;
+package tienda_distribuida.ms_ventas.unbosque.detalleVenta.Service;
 
-import com.example.tienda_generica_distribuidos.unbosque.detalleVenta.DTO.DetalleVentaDTO;
-
+import tienda_distribuida.ms_ventas.unbosque.detalleVenta.DTO.DetalleVentaDTO;
 import java.util.List;
 
 public interface DetalleVentaInterface {

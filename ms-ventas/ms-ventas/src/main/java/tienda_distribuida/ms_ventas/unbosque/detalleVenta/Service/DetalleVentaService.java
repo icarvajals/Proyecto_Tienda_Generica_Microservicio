@@ -1,9 +1,12 @@
-package com.example.tienda_generica_distribuidos.unbosque.detalleVenta.Service;
+package tienda_distribuida.ms_ventas.unbosque.detalleVenta.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.tienda_generica_distribuidos.unbosque.detalleVenta.DTO.DetalleVentaDTO;
-import com.example.tienda_generica_distribuidos.unbosque.detalleVenta.Entidad.DetalleVentaEntidad;
+import tienda_distribuida.ms_ventas.unbosque.detalleVenta.DTO.DetalleVentaDTO;
+import tienda_distribuida.ms_ventas.unbosque.detalleVenta.Entidad.DetalleVentaEntidad;
+import tienda_distribuida.ms_ventas.unbosque.detalleVenta.Service.DetalleVentaInterface;
+import tienda_distribuida.ms_ventas.unbosque.detalleVenta.Service.DetalleVentaRepository;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,21 +20,23 @@ public class DetalleVentaService implements DetalleVentaInterface {
 
     @Override
     public DetalleVentaDTO guardarDetalle(DetalleVentaDTO detalleVentaDTO) {
-        DetalleVentaEntidad entidad = new DetalleVentaEntidad(
-                0,
-                detalleVentaDTO.getCodigo_producto(),
-                detalleVentaDTO.getCodigo_venta(),
-                detalleVentaDTO.getCantidad_producto(),
-                detalleVentaDTO.getValor_total(),
-                detalleVentaDTO.getValor_venta(),
-                detalleVentaDTO.getValoriva()
-        );
+        DetalleVentaEntidad entidad = new DetalleVentaEntidad();
+
+        entidad.setCodigo_producto(detalleVentaDTO.getCodigo_producto());
+        entidad.setCodigo_venta(detalleVentaDTO.getCodigo_venta());
+        entidad.setCantidad_producto(detalleVentaDTO.getCantidad_producto());
+        entidad.setValor_total(detalleVentaDTO.getValor_total());
+        entidad.setValor_venta(detalleVentaDTO.getValor_venta());
+        entidad.setValoriva(detalleVentaDTO.getValoriva());
 
         try {
             DetalleVentaEntidad guardado = detalleVentaRepository.save(entidad);
+            // Ahora guardado tendrá el ID real generado por Postgres
             detalleVentaDTO.setCodigo_detalle_venta(guardado.getCodigo_detalle_venta());
             return detalleVentaDTO;
         } catch (Exception e) {
+            // Es mejor loguear el error para saber qué pasó
+            System.out.println("Error al guardar: " + e.getMessage());
             return null;
         }
     }
@@ -100,6 +105,5 @@ public class DetalleVentaService implements DetalleVentaInterface {
         } catch (Exception e) {
             return e.getMessage();
         }
-
     }
 }

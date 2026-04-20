@@ -1,6 +1,6 @@
-package com.example.tienda_generica_distribuidos.unbosque.proveedor.Service;
+package tienda_distribuida.ms_proveedores.unbosque.proveedor.Service;
 
-import com.example.tienda_generica_distribuidos.unbosque.proveedor.DTO.ProveedorDTO;
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.DTO.ProveedorDTO;
 
 import java.util.List;
 

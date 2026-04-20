@@ -1,4 +1,4 @@
-package com.example.tienda_generica_distribuidos.unbosque.detalleVenta.DTO;
+package tienda_distribuida.ms_ventas.unbosque.detalleVenta.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

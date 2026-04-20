@@ -1,4 +1,4 @@
-package com.example.tienda_generica_distribuidos.unbosque.detalleVenta.Entidad;
+package tienda_distribuida.ms_ventas.unbosque.detalleVenta.Entidad;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,12 +13,7 @@ import lombok.NoArgsConstructor;
 public class DetalleVentaEntidad {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_detalle_venta_gen")
-    @SequenceGenerator(
-            name = "seq_detalle_venta_gen",
-            sequenceName = "seq_detalle_venta",
-            allocationSize = 1
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "codigo_detalle_venta")
     private int codigo_detalle_venta;
 

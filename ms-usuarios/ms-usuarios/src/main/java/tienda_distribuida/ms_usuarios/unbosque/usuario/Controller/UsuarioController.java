@@ -1,15 +1,15 @@
-package com.example.tienda_generica_distribuidos.unbosque.usuario.Controller;
+package tienda_distribuida.ms_usuarios.unbosque.usuario.Controller;
 
-import com.example.tienda_generica_distribuidos.unbosque.usuario.DTO.LoginRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.tienda_generica_distribuidos.unbosque.usuario.DTO.UsuarioDTO;
-import com.example.tienda_generica_distribuidos.unbosque.usuario.Service.UsuarioInterface;
+import tienda_distribuida.ms_usuarios.unbosque.usuario.DTO.LoginRequest;
+import tienda_distribuida.ms_usuarios.unbosque.usuario.DTO.UsuarioDTO;
+import tienda_distribuida.ms_usuarios.unbosque.usuario.Service.UsuarioInterface;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/usuarios")

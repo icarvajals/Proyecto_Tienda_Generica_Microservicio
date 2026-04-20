@@ -1,4 +1,4 @@
-package com.example.tienda_generica_distribuidos.unbosque.venta.Entidad;
+package tienda_distribuida.ms_ventas.unbosque.venta.Entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,7 +19,6 @@ public class VentaEntidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Column(name = "codigo_venta")
     private int codigo_venta;
 

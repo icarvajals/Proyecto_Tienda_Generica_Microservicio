@@ -1,4 +1,4 @@
-package com.example.tienda_generica_distribuidos.unbosque.usuario.DTO;
+package tienda_distribuida.ms_usuarios.unbosque.usuario.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

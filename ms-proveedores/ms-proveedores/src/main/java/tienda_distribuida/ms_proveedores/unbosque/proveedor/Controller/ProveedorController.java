@@ -1,12 +1,11 @@
-package com.example.tienda_generica_distribuidos.unbosque.proveedor.Controller;
+package tienda_distribuida.ms_proveedores.unbosque.proveedor.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.tienda_generica_distribuidos.unbosque.proveedor.DTO.ProveedorDTO;
-import com.example.tienda_generica_distribuidos.unbosque.proveedor.Service.ProveedorInterface;
-
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.DTO.ProveedorDTO;
+import tienda_distribuida.ms_proveedores.unbosque.proveedor.Service.ProveedorInterface;
 import java.util.List;
 
 @RestController

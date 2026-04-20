@@ -1,10 +1,11 @@
-package com.example.tienda_generica_distribuidos.unbosque.producto.Controller;
+package tienda_distribuida.ms_productos.unbosque.producto.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.example.tienda_generica_distribuidos.unbosque.producto.DTO.ProductoDTO;
-import com.example.tienda_generica_distribuidos.unbosque.producto.Service.ProductoInterface;
-
+import tienda_distribuida.ms_productos.unbosque.producto.DTO.ProductoDTO;
+import tienda_distribuida.ms_productos.unbosque.producto.Service.ProductoInterface;
 import java.util.List;
 
 @RestController
@@ -15,9 +16,24 @@ public class ProductoController {
     @Autowired
     private ProductoInterface productoService;
 
+    @Autowired
+    private ProveedorClient proveedorClient;
+
     @PostMapping("/agregar")
-    public ProductoDTO guardar(@RequestBody ProductoDTO productoDTO) {
-        return productoService.guardarProducto(productoDTO);
+    public ResponseEntity<?> guardar(@RequestBody ProductoDTO productoDTO) {
+        try {
+            ResponseEntity<?> response = proveedorClient.buscarProveedorPorNit((long) productoDTO.getNitproveedor());
+
+            return ResponseEntity.ok(productoService.guardarProducto(productoDTO));
+
+        } catch (feign.FeignException.NotFound e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Error: El proveedor con NIT " + productoDTO.getNitproveedor() + " no existe en el sistema.");
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error técnico: No se pudo validar el proveedor en este momento.");
+        }
     }
 
     @GetMapping("/listar")

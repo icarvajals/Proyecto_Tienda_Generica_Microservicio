@@ -1,7 +1,6 @@
-package com.example.tienda_generica_distribuidos.unbosque.producto.Service;
+package tienda_distribuida.ms_productos.unbosque.producto.Service;
 
-import com.example.tienda_generica_distribuidos.unbosque.producto.DTO.ProductoDTO;
-
+import tienda_distribuida.ms_productos.unbosque.producto.DTO.ProductoDTO;
 import java.util.List;
 
 public interface ProductoInterface {
