@@ -31,8 +31,9 @@ public class ProductoController {
                     .body("Error: El proveedor con NIT " + productoDTO.getNitproveedor() + " no existe en el sistema.");
 
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error técnico: No se pudo validar el proveedor en este momento.");
+                    .body("Error técnico: " + e.getClass().getName() + " - " + e.getMessage());
         }
     }
 

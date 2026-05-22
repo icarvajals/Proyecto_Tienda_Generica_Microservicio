@@ -1,3 +1,4 @@
+--===================== Base de datos Usuarios.
 CREATE DATABASE db_tienda_usuarios;
 CREATE TABLE USUARIO(
     CEDULA_USUARIO INT PRIMARY KEY,
