@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
-    name = "ms-proveedores",
+    value = "proveedor-service",
     url = "https://ms-proveedores-production.up.railway.app"
 )
 public interface ProveedorClient {
