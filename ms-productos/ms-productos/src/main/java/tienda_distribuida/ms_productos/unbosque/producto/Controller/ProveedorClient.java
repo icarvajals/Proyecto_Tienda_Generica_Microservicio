@@ -1,6 +1,5 @@
 package tienda_distribuida.ms_productos.unbosque.producto.Controller;
 
-import jakarta.ws.rs.GET;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
