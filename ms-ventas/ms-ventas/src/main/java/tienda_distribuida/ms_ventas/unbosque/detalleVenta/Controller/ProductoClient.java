@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(
     value = "producto-service",
-    url = "ms-productos-production.up.railway.app"
+    url = "https://ms-productos-production.up.railway.app"
 )
 public interface ProductoClient {
 
