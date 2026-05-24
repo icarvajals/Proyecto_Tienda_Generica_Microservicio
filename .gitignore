@@ -8,6 +8,6 @@
 **/bin/
 build/
 
-# Archivos del sistema
+# Archivos del sistema final
 .DS_Store
 Thumbs.db
