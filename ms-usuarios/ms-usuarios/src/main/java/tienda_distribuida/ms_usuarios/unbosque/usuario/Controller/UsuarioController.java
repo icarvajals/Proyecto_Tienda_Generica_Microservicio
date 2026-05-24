@@ -10,7 +10,6 @@ import tienda_distribuida.ms_usuarios.unbosque.usuario.DTO.UsuarioDTO;
 import tienda_distribuida.ms_usuarios.unbosque.usuario.Service.UsuarioInterface;
 //Ms_usuario
 import java.util.List;
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
