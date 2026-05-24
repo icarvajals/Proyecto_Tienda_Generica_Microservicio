@@ -1,4 +1,4 @@
-package tienda_distribuida.ms_usuarios.unbosque.usuario.config;
+package tienda_distribuida.ms_proveedores.unbosque.proveedor.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
